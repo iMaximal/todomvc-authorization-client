@@ -2,9 +2,9 @@
 
 class Utils {
   static uuid() {
-    let i,
-      random,
-      id = '';
+    let i;
+    let random;
+    let id = '';
 
     for (i = 0; i < 32; i++) {
       random = Math.random() * 16 | 0;
@@ -19,15 +19,6 @@ class Utils {
 
   static pluralize(count, word) {
     return count === 1 ? word : `${word}s`;
-  }
-
-  static store(namespace, data) {
-    if (data) {
-      return localStorage.setItem(namespace, JSON.stringify(data));
-    }
-
-    const datastored = localStorage.getItem(namespace);
-    return (datastored && JSON.parse(datastored)) || [];
   }
 
   static mergeTodos({ mode, newData, currentData }) {

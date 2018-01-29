@@ -23,17 +23,16 @@ class TodoApp extends Component {
       newTodo: '',
     };
     this.onAllData = this.onAllData.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(newTodo) {
+  handleChange = (newTodo) => {
     if (!this.props.auth.isAuthenticated() || !this.props.auth.userHasScopes(['write:todos'])) {
       return;
     }
     this.setState({ newTodo });
   }
 
-  handleNewTodoKeyDown(event) {
+  handleNewTodoKeyDown= (event) => {
     if (!this.props.auth.isAuthenticated() || !this.props.auth.userHasScopes(['write:todos'])) {
       return;
     }
@@ -48,7 +47,7 @@ class TodoApp extends Component {
     }
   }
 
-  toggleAll(event) {
+  toggleAll= (event) => {
     if (!this.props.auth.isAuthenticated() || !this.props.auth.userHasScopes(['write:todos'])) {
       return;
     }
@@ -100,9 +99,6 @@ class TodoApp extends Component {
         />
         <header className="header">
           <h1 className="main-title">Todos with Authorization</h1>
-          <p className="auth-text">
-            <a className="blog-link auth-link" href="https://medium.appbase.io/securing-a-react-web-app-with-authorization-rules-2e43bf5592ca" target="_blank">Read how we built it!</a>
-          </p>
           {
             auth.isAuthenticated() ?
               <p className="auth-text"><a className="auth-link" onClick={auth.logout}>logout</a></p> :
@@ -113,8 +109,8 @@ class TodoApp extends Component {
             dataField="title"
             className="new-todo-container"
             placeholder="What needs to be done?"
-            onKeyDown={this.handleNewTodoKeyDown.bind(this)}
-            onValueChange={this.handleChange.bind(this)}
+            onKeyDown={this.handleNewTodoKeyDown}
+            onValueChange={this.handleChange}
             defaultSelected={this.state.newTodo}
             autoFocus
           />
@@ -124,7 +120,7 @@ class TodoApp extends Component {
           <input
             className="toggle-all"
             type="checkbox"
-            onChange={this.toggleAll.bind(this)}
+            onChange={this.toggleAll}
             checked={activeTodoCount === 0}
           />
           <ul className="todo-list">

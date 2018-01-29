@@ -149,27 +149,6 @@ class TodoModel {
     });
   }
 
-  toggle(todoToToggle) {
-    // optimistic logic
-    this.todos = this.todos.map((todo) => todo !== todoToToggle ? todo : {
-      ...todo,
-      completed: !todo.completed,
-    });
-    this.inform();
-
-    const payload = {
-      id: todoToToggle.id,
-      completed: !todoToToggle.completed,
-    };
-
-    fetch(server, {
-      method: 'PUT',
-      headers: headers(),
-      body: JSON.stringify(payload),
-    })
-      .then((res) => res.json())
-      .then((json) => console.log(json));
-  }
 
   destroy(todo) {
     // optimistic logic
