@@ -16,24 +16,6 @@
     "url": "https://github.com/iMaximal/todomvc-authorization-client/issues"
   },
   "homepage": "https://github.com/iMaximal/todomvc-authorization-client#readme",
-  "devDependencies": {
-    "@appbaseio/reactivesearch": "^1.4.0",
-    "appbase-js": "^2.1.0",
-    "babel-core": "^6.24.0",
-    "babel-eslint": "^8.2.1",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "cross-env": "^5.1.3",
-    "eslint-plugin-react": "^7.6.1",
-    "html-webpack-plugin": "^2.24.1",
-    "npm-run-all": "^4.0.2",
-    "shebang-loader": "0.0.1",
-    "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2"
-  },
   "dependencies": {
     "auth0-js": "^8.10.1",
     "classnames": "^2.2.5",
@@ -54,6 +36,24 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3"
+  },
+  "devDependencies": {
+    "@appbaseio/reactivesearch": "^1.4.1",
+    "appbase-js": "^2.1.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "cross-env": "^5.1.3",
+    "eslint-plugin-react": "^7.6.1",
+    "html-webpack-plugin": "^2.24.1",
+    "npm-run-all": "^4.0.2",
+    "shebang-loader": "0.0.1",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
