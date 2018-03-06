@@ -23,6 +23,10 @@ npm install
 
 ## Usage
 
+**Don't use on production!**
+
+_The moment dependency defined in package-lock.json has a known moderate severity security vulnerability in version range < 2.19.3 and should be updated._
+
 Start:
 ````bash
 npm run start
